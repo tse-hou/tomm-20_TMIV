@@ -1,4 +1,4 @@
-Dataset,Frame,Synthesized View,p1,p2,p3
+Dataset,Frame,Synthesized.View,p1,p2,p3
 PoznanHall,80,3,1,0,0
 PoznanHall,80,5,1,0,0
 PoznanHall,160,3,1,0,0
@@ -15,7 +15,7 @@ OrangeKitchen,16,4,2,0,0
 OrangeKitchen,16,5,2,0,0
 OrangeKitchen,16,6,3,0,0
 OrangeKitchen,16,7,2,0,0
-OrangeKitchen,16,8,3,0,0
+OrangeKitchen,16,8,2,0,0
 OrangeKitchen,16,9,2,0,0
 OrangeKitchen,16,11,2,0,0
 OrangeKitchen,16,13,2,0,0
@@ -87,7 +87,7 @@ OrangeKitchen,72,4,2,0,0
 OrangeKitchen,72,5,2,0,0
 OrangeKitchen,72,6,3,0,0
 OrangeKitchen,72,7,2,0,0
-OrangeKitchen,72,8,3,0,0
+OrangeKitchen,72,8,2,0,0
 OrangeKitchen,72,9,2,0,0
 OrangeKitchen,72,11,2,0,0
 OrangeKitchen,72,13,2,0,0
@@ -101,22 +101,22 @@ OrangeKitchen,72,21,2,0,0
 OrangeKitchen,72,23,2,0,0
 IntelFrog,50,2,2,0,0
 IntelFrog,50,4,2,0,0
-IntelFrog,50,6,2,0,0
+IntelFrog,50,6,1,0,0
 IntelFrog,50,8,2,0,0
 IntelFrog,50,10,2,0,0
 IntelFrog,50,12,2,0,0
 IntelFrog,100,2,2,0,0
 IntelFrog,100,4,2,0,0
 IntelFrog,100,6,2,0,0
-IntelFrog,100,8,2,0,0
-IntelFrog,100,10,2,0,0
+IntelFrog,100,8,1,0,0
+IntelFrog,100,10,1,0,0
 IntelFrog,100,12,2,0,0
 IntelFrog,150,2,2,0,0
 IntelFrog,150,4,2,0,0
 IntelFrog,150,6,2,0,0
-IntelFrog,150,8,2,0,0
-IntelFrog,150,10,2,0,0
-IntelFrog,150,12,2,0,0
+IntelFrog,150,8,1,0,0
+IntelFrog,150,10,1,0,0
+IntelFrog,150,12,1,0,0
 IntelFrog,200,2,2,0,0
 IntelFrog,200,4,2,0,0
 IntelFrog,200,6,2,0,0
@@ -128,7 +128,7 @@ IntelFrog,250,4,2,0,0
 IntelFrog,250,6,2,0,0
 IntelFrog,250,8,2,0,0
 IntelFrog,250,10,2,0,0
-IntelFrog,250,12,1,0,0
+IntelFrog,250,12,2,0,0
 TechnicolorPainter,50,1,2,0,0
 TechnicolorPainter,50,2,2,0,0
 TechnicolorPainter,50,4,2,0,0
@@ -168,7 +168,7 @@ TechnicolorPainter,200,14,2,0,0
 TechnicolorPainter,250,1,2,0,0
 TechnicolorPainter,250,2,2,0,0
 TechnicolorPainter,250,4,2,0,0
-TechnicolorPainter,250,6,1,0,0
+TechnicolorPainter,250,6,2,0,0
 TechnicolorPainter,250,7,2,0,0
 TechnicolorPainter,250,8,2,0,0
 TechnicolorPainter,250,11,2,0,0
@@ -181,7 +181,7 @@ PoznanCarpark,80,5,1,0,0
 PoznanCarpark,120,3,1,0,0
 PoznanCarpark,120,5,1,0,0
 PoznanCarpark,160,3,1,0,0
-PoznanCarpark,160,5,2,0,0
+PoznanCarpark,160,5,1,0,0
 PoznanCarpark,200,3,1,0,0
 PoznanCarpark,200,5,1,0,0
 PoznanStreet,40,3,1,0,0
