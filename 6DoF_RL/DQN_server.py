@@ -10,7 +10,7 @@ import time
 
 """setting"""
 # Modify by Tsehou 20201023, to let program see the specific GPU
-gpus = [1]  # Here I set CUDA to only see one GPU
+gpus = [3]  # Here I set CUDA to only see one GPU
 os.environ["CUDA_VISIBLE_DEVICES"] = ",".join([str(i) for i in gpus])
 
 
@@ -31,10 +31,10 @@ os.environ["CUDA_VISIBLE_DEVICES"] = ",".join([str(i) for i in gpus])
 
 
 # %%
-test = "ERP_QJ_18-2"
+test = "PTP_QJ18_4"
 # BEST_OR_LAST = 'best'
 BEST_OR_LAST = "last"
-train = "ERP_QJ_18-2"
+train = "PTP_QJ18_4"
 
 # %%
 def run_maze():
@@ -85,7 +85,7 @@ def run_maze():
                             opt_rate = temp_top_1_rate
                             # Modify by Tsehou 20201023, for output weight of each model in different foldedr
                             # RL.save_weight(episode, './weights_exp/')
-                            RL.save_weight(episode, f"./weights_exp/{train}/")
+                            RL.save_weight(episode, f"./weights_exp/exp_response_apr/{train}/")
 
                             print(
                                 "[*%d] OPT rate %.4f, %.4f, %.4f"
