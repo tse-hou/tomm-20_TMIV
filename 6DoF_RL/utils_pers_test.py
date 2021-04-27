@@ -9,9 +9,9 @@ class read_db:
     def __init__(self, is_train=False, test_folder=""):
         # train and testing setting:
         # equi
-        # self.dbs = ['TechnicolorMuseum', 'ClassroomVideo', 'TechnicolorHijack']
+        # self.dbs = ["TechnicolorMuseum", "ClassroomVideo", "TechnicolorHijack"]
         # pers
-        # self.dbs = ['PoznanFencing', 'IntelFrog', 'PoznanHall','PoznanCarpark', 'PoznanStreet', 'OrangeKitchen'] # , 'TechnicolorPainter'
+        # self.dbs = ['PoznanFencing', 'IntelFrog', 'PoznanHall','PoznanCarpark', 'TechnicolorPainter', 'OrangeKitchen'] # , 'PoznanStreet'
         # test pers
         self.dbs = [
             "PoznanHall",
@@ -22,7 +22,7 @@ class read_db:
             "PoznanStreet",
             "PoznanFencing",
         ]
-        #
+        
         self.sv = self.read_source_views()
         self.cp = self.read_camera_parameters()
         if is_train:
@@ -57,9 +57,9 @@ class observe:
     def __init__(self, sv, cp, db):
         # train and testing setting:
         # equi
-        # self.dbs = ['TechnicolorMuseum', 'ClassroomVideo', 'TechnicolorHijack']
+        # self.dbs = ["TechnicolorMuseum", "ClassroomVideo", "TechnicolorHijack"]
         # pers
-        # self.dbs = ['PoznanFencing', 'IntelFrog', 'PoznanHall','PoznanCarpark', 'PoznanStreet', 'OrangeKitchen'] # , 'TechnicolorPainter'
+        # self.dbs = ['PoznanFencing', 'IntelFrog', 'PoznanHall','PoznanCarpark', 'TechnicolorPainter', 'OrangeKitchen'] # , 'PoznanStreet'
         # test pers
         self.dbs = [
             "PoznanHall",
@@ -70,7 +70,7 @@ class observe:
             "PoznanStreet",
             "PoznanFencing",
         ]
-        #
+        
 
         self.sv = sv
         self.cp = cp
@@ -78,7 +78,9 @@ class observe:
         # self.random_settings()
         # train and testing setting:
         # equi
-        # self.full_data = pandas.concat([self.db[self.dbs[0]], self.db[self.dbs[1]], self.db[self.dbs[2]]], axis=0)
+        # self.full_data = pandas.concat(
+        #     [self.db[self.dbs[0]], self.db[self.dbs[1]], self.db[self.dbs[2]]], axis=0
+        # )
         # training
         # self.full_data = pandas.concat([self.db[self.dbs[0]], self.db[self.dbs[1]], self.db[self.dbs[2]],
         #                                 self.db[self.dbs[3]], self.db[self.dbs[4]], self.db[self.dbs[5]]], axis=0)

@@ -28,6 +28,7 @@ class DeepQNetwork:
             episode = 1000,
             is_monitor = False
     ):
+        
         self.n_actions = n_actions
         self.n_features = n_features
         self.lr = learning_rate
@@ -66,7 +67,9 @@ class DeepQNetwork:
         # Create a saver
         self.saver = tf.train.Saver(tf.global_variables())
         self.update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
-        self.sess = tf.Session(config=tf.ConfigProto(allow_soft_placement=True,log_device_placement=False))
+        config = tf.ConfigProto(allow_soft_placement=True,log_device_placement=False)
+        config.gpu_options.allow_growth = True
+        self.sess = tf.Session(config=config)
         if output_graph:
             # $ tensorboard --logdir=logs
             tf.summary.FileWriter("logs/", self.sess.graph)

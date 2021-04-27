@@ -7,13 +7,11 @@ from maze_env import Maze
 from RL_brain import DeepQNetwork
 import pandas as pd
 import time
-
+from sys import argv
 """setting"""
 # Modify by Tsehou 20201023, to let program see the specific GPU
-gpus = [3]  # Here I set CUDA to only see one GPU
+gpus = [argv[1]]  # Here I set CUDA to only see one GPU
 os.environ["CUDA_VISIBLE_DEVICES"] = ",".join([str(i) for i in gpus])
-
-
 # %%
 # exp1
 # [20200115] (1) test remove texture, (2) cancel the state encoder
@@ -31,10 +29,10 @@ os.environ["CUDA_VISIBLE_DEVICES"] = ",".join([str(i) for i in gpus])
 
 
 # %%
-test = "PTP_QJ18_4"
+test = argv[2]
 # BEST_OR_LAST = 'best'
 BEST_OR_LAST = "last"
-train = "PTP_QJ18_4"
+train = argv[2]
 
 # %%
 def run_maze():
@@ -85,7 +83,7 @@ def run_maze():
                             opt_rate = temp_top_1_rate
                             # Modify by Tsehou 20201023, for output weight of each model in different foldedr
                             # RL.save_weight(episode, './weights_exp/')
-                            RL.save_weight(episode, f"./weights_exp/exp_response_apr/{train}/")
+                            RL.save_weight(episode, f"./weights_exp/{train}/")
 
                             print(
                                 "[*%d] OPT rate %.4f, %.4f, %.4f"
@@ -162,9 +160,7 @@ if __name__ == "__main__":
     is_train = True
     # is_train = False
     is_monitor = False
-    env = Maze(
-        is_train=is_train, test_folder="obj_nsv", is_monitor=is_monitor, reward_mag=100
-    )
+    env = Maze(is_train=is_train, test_folder="obj_nsv", is_monitor=is_monitor, reward_mag=100)
     if is_train:
         RL = DeepQNetwork(
             env.n_actions,
@@ -200,7 +196,7 @@ if __name__ == "__main__":
     env.mainloop()
     # RL.plot_cost()
     if is_train:
-        RL.save_weight(20210422, f"./weights_exp/exp_response_apr/{train}/last/")
+        RL.save_weight(20210422, f"./weights_exp/{train}/last/")
 
         df = pd.DataFrame({"loss": RL.cost_his})
         df.to_csv("./opt_hist/" + train + "_adam_loss.csv", index=False)
