@@ -30,8 +30,8 @@ os.environ["CUDA_VISIBLE_DEVICES"] = ",".join([str(i) for i in gpus])
 
 # %%
 test = argv[2]
-# BEST_OR_LAST = 'best'
-BEST_OR_LAST = "last"
+BEST_OR_LAST = 'best'
+# BEST_OR_LAST = "last"
 train = argv[2]
 
 # %%
@@ -157,7 +157,10 @@ def run_maze():
 # obj_nsv
 if __name__ == "__main__":
     # maze game
-    is_train = True
+    if argv[3] == 1:
+        is_train = True
+    else:
+        is_train = False
     # is_train = False
     is_monitor = False
     env = Maze(is_train=is_train, test_folder="obj_nsv", is_monitor=is_monitor, reward_mag=100)

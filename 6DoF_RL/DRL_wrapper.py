@@ -14,4 +14,4 @@ elif(args.video_type == "PTP" and args.is_training == 1):
 elif(args.video_type == "PTP" and args.is_training == 0):
     os.system("cp utils_pers_test.py utils.py")
 
-os.system(f"xvfb-run -a python DQN_server.py {args.gpu_idx} {args.model_name}")
+os.system(f"xvfb-run -a python DQN_server.py {args.gpu_idx} {args.model_name} {args.is_training}")

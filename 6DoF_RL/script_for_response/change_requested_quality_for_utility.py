@@ -12,7 +12,7 @@ def convert_CEL(csv, requested_quality):
 
 
 def main():
-    requested_quality = 18
+    requested_quality = argv[1]
     output_folder = "../datasets/states/train"
     # PTP
     p = Path("../datasets/states")
